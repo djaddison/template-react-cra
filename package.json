@@ -7,7 +7,10 @@
     "build": "BUILD_PATH=./dist react-scripts build",
     "test": "CI=true react-scripts test --passWithNoTests",
     "clean": "rm -rf dist",
-    "realclean": "rm -rf dist node_modules yarn"
+    "realclean": "rm -rf dist node_modules yarn",
+    "format-code": "prettier src/**/*.{ts,tsx,css} --write",
+    "check-type-checking": "tsc --noEmit",
+    "check-code-formatting": "prettier src/**/*.{ts,tsx,css} --check"
   },
   "eslintConfig": {
     "extends": [
@@ -32,6 +35,7 @@
     "react-dom": "^17.0.2"
   },
   "devDependencies": {
+    "@testing-library/dom": "8.7.2",
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^11.2.7",
     "@testing-library/user-event": "^12.8.3",
@@ -39,6 +43,7 @@
     "@types/node": "^12.20.28",
     "@types/react": "^17.0.27",
     "@types/react-dom": "^17.0.9",
+    "prettier": "2.4.1",
     "react-scripts": "4.0.3",
     "typescript": "^4.4.3"
   }
