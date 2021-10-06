@@ -4,8 +4,10 @@
   "license": "Apache-2.0",
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test"
+    "build": "BUILD_PATH=./dist react-scripts build",
+    "test": "CI=true react-scripts test --passWithNoTests",
+    "clean": "rm -rf dist",
+    "realclean": "rm -rf dist node_modules yarn"
   },
   "eslintConfig": {
     "extends": [
